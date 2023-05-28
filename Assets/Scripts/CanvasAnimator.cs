@@ -22,12 +22,14 @@ public class CanvasAnimator : MonoBehaviour
 
     public void ShowCanvas()
     {
+        Debug.Log("Showed Canvas");
        canvasAnimation.Play("CanvasShowAnim");
     }
 
     public void HideCanvas()
     {
-       canvasAnimation.Play("CanvasHideAnim");
+        Debug.Log("Hide Canvas");
+        canvasAnimation.Play("CanvasHideAnim");
     }
 
 
