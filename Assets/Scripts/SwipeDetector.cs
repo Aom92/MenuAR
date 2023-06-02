@@ -110,7 +110,7 @@ public class SwipeDetector : MonoBehaviour
         //Do something when swiped left
 
         Debug.Log("Swipe Left!!!");
-        SendMessageUpwards("NextFood");
+        
 
     }
 
@@ -118,5 +118,7 @@ public class SwipeDetector : MonoBehaviour
     {
         //Do something when swiped right
         Debug.Log("Swipe Right!!!");
+        SendMessageUpwards("NextFood");
+
     }
 }

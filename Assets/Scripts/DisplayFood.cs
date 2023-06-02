@@ -7,6 +7,7 @@ public class DisplayFood : MonoBehaviour
 
     public GameObject[] foodModel;
     public int foodIndex = 0;
+    public Animator ContainerAnimation;
 
 
     // Start is called before the first frame update
@@ -23,7 +24,9 @@ public class DisplayFood : MonoBehaviour
         {
             foodModel[0].SetActive(true);
         }
-        
+
+        this.ContainerAnimation = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -34,6 +37,8 @@ public class DisplayFood : MonoBehaviour
 
     public void NextFood()
     {
+        // Spin first, then change food.
+        ContainerAnimation.Play("FoodContainerSpin");
 
         Debug.Log("length is:" + foodModel.Length);
         if(foodIndex >= foodModel.Length - 1)
