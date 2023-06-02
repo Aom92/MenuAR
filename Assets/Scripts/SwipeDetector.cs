@@ -14,6 +14,7 @@ public class SwipeDetector : MonoBehaviour
     private Vector2 fingerUpPos;
 
     public bool detectSwipeAfterRelease = false;
+    public bool Enabled = true;
 
     public float SWIPE_THRESHOLD = 20f;
 
@@ -117,9 +118,18 @@ public class SwipeDetector : MonoBehaviour
     void OnSwipeRight()
     {
         //Do something when swiped right
-        Debug.Log("Swipe Right!!!");
-        SendMessageUpwards("NextFood");
-        SendMessageUpwards("FoodTextUpdate");
+        if (Enabled)
+        {
+            Debug.Log("Swipe Right!!!");
+            SendMessageUpwards("NextFood");
+            SendMessageUpwards("FoodTextUpdate");
+        }
+        
 
+    }
+
+    public void AllowCarrousel()
+    {
+        Enabled = !Enabled;
     }
 }
