@@ -70,6 +70,7 @@ public class CanvasAnimator : MonoBehaviour
     public void StartIndicator()
     {
         indicator.Play("SwipeIndicator");
+        SideBarAnimation.Play("CanvasSideBarHide");
     }
 
 }
