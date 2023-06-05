@@ -2110,20 +2110,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Instrucciones:
-
-    Deslice hacia la izquierda para navegar entre los
-    distintos platillos que tenemos disponible.
-
-
-    Utilice el boton de expandir
-    para agrandar los platillos para verlos mejor.
-
-
-    Cuando este listo para ordenar
-    llame a nuestro mesero.
-
-'
+  m_text: "Instrucciones:\r\nDeslice hacia la izquierda para navegar entre los distintos
+    platillos que tenemos disponible.\r\n\r\nUtilice el bot\xF3n de expandir para
+    agrandar los platillos para verlos mejor. Presione de nuevo para desactivar.\r\n\r\nCuando
+    est\xE9 listo para ordenar llame a nuestro mesero.\r\n\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 06011a5eaeb07bb4cad1734c1e8362ff, type: 2}
   m_sharedMaterial: {fileID: 1491303600290442770, guid: 06011a5eaeb07bb4cad1734c1e8362ff, type: 2}
@@ -2641,8 +2631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.101288, y: 190.44214}
-  m_SizeDelta: {x: -46.972, y: -811.4036}
+  m_AnchoredPosition: {x: -5.101288, y: 196.36456}
+  m_SizeDelta: {x: -46.972, y: -799.5588}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1800205466
 MonoBehaviour:
