@@ -17,6 +17,8 @@ public class SwipeDetector : MonoBehaviour
     public bool Enabled = true;
 
     public float SWIPE_THRESHOLD = 20f;
+    public Animator indicator;
+    public GameObject indIcon;
 
     // Update is called once per frame
     void Update()
@@ -109,9 +111,9 @@ public class SwipeDetector : MonoBehaviour
     void OnSwipeLeft()
     {
         //Do something when swiped left
-
+        indicator.StopPlayback();
+        indIcon.SetActive(false);
         
-        //Do something when swiped right
         if (Enabled)
         {
             Debug.Log("Swipe Left!!!");

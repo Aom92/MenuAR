@@ -8,6 +8,7 @@ public class CanvasAnimator : MonoBehaviour
     public Animator canvasAnimation;
     public Animator SideBarAnimation;
     public Animator SideBarAnimation2;
+    public Animator indicator;
 
     private bool sidebartoogle = false;
 
@@ -16,6 +17,7 @@ public class CanvasAnimator : MonoBehaviour
     {
         HideCanvas();
         HideSideBar();
+        StartIndicator();
 
     }
 
@@ -63,6 +65,11 @@ public class CanvasAnimator : MonoBehaviour
         {
             HideSideBar();
         }
+    }
+
+    public void StartIndicator()
+    {
+        indicator.Play("SwipeIndicator");
     }
 
 }
