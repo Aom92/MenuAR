@@ -1195,7 +1195,6 @@ MonoBehaviour:
   canvasAnimation: {fileID: 286290764}
   SideBarAnimation: {fileID: 1432447996}
   SideBarAnimation2: {fileID: 1866292762}
-  indicator: {fileID: 1432447996}
 --- !u!4 &628693657
 Transform:
   m_ObjectHideFlags: 0
@@ -1613,7 +1612,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821730398}
   m_LocalRotation: {x: 0.13920228, y: -0, z: -0, w: 0.990264}
-  m_LocalPosition: {x: -1.97, y: 1.899, z: -2.854}
+  m_LocalPosition: {x: 0.34, y: 1.899, z: -2.854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3719,7 +3718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 858}
+  m_AnchoredPosition: {x: 0, y: 971}
   m_SizeDelta: {x: 0, y: -1361.594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2114122827
