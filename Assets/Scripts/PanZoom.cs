@@ -6,20 +6,21 @@ public class PanZoom : MonoBehaviour
 {
     public bool Enabled = false;
     public GameObject Target;
-    public float panSmoothing;
     private Vector3 startPos;
+
+    private float initialDistance;
+    private Vector3 initialScale;
 
     // Start is called before the first frame update
     void Start()
     {
-        startPos = Target.transform.position;
+        
     }
 
     public void AllowMovement()
     {
         Enabled = !Enabled;
-        if(!Enabled)
-            Target.transform.position = startPos;
+        
     }
 
     // Update is called once per frame
@@ -27,33 +28,45 @@ public class PanZoom : MonoBehaviour
     {
         if (Enabled)
         {
-            //Panning
-            if (Input.touchCount > 0)
-            {
-                Touch touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Moved)
-                {
-                    Vector2 pos = touch.deltaPosition;
-                    Vector3 position = new Vector3(pos.x / panSmoothing, 0, pos.y / panSmoothing);
-                    Target.transform.position -= position;
-                }
-            }
+            
 
             //Zooming
-            if (Input.touchCount >= 2)
+            if (Input.touchCount == 2)
             {
                 var touchZero = Input.GetTouch(0);
                 var touchOne = Input.GetTouch(1);
 
-                var touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-                var touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
 
-                var prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-                var currentMagnitude = (touchZero.position - touchOne.position).magnitude;
+                //Si se  levanta alguno de los dos dedos, cancelar la accion.
+                if (touchZero.phase == TouchPhase.Ended || touchZero.phase == TouchPhase.Canceled ||
+                    touchOne.phase == TouchPhase.Ended || touchOne.phase == TouchPhase.Canceled)
+                {
+                    return;
+                }
 
-                float difference = currentMagnitude - prevMagnitude;
 
-                Target.transform.localScale = new Vector3(difference, difference, difference);
+                if(touchZero.phase == TouchPhase.Began || touchOne.phase == TouchPhase.Began)
+                {
+                  initialDistance = Vector2.Distance(touchZero.position, touchOne.position);
+                  initialScale = Target.transform.localScale;
+
+                }
+                else 
+                {
+                    var currentDistance = Vector2.Distance(touchZero.position, touchOne.position);
+                    // if accidental touch or movement really small
+                    if (Mathf.Approximately(initialDistance, 0))
+                    {
+                        return;
+                    }
+
+                    var factor = currentDistance / initialDistance;
+                    Target.transform.localScale = initialScale * factor;
+                }
+             
+                
+
+                
 
             }
         }

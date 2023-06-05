@@ -110,20 +110,20 @@ public class SwipeDetector : MonoBehaviour
     {
         //Do something when swiped left
 
-        Debug.Log("Swipe Left!!!");
         
+        //Do something when swiped right
+        if (Enabled)
+        {
+            Debug.Log("Swipe Left!!!");
+            SendMessageUpwards("NextFood");
+            SendMessageUpwards("FoodTextUpdate");
+        }
 
     }
 
     void OnSwipeRight()
     {
-        //Do something when swiped right
-        if (Enabled)
-        {
-            Debug.Log("Swipe Right!!!");
-            SendMessageUpwards("NextFood");
-            SendMessageUpwards("FoodTextUpdate");
-        }
+        
         
 
     }
