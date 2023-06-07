@@ -23,7 +23,7 @@ aproximadamente real como luce y que tamaño tiene la porción del platillo a pe
 ## Uso
 Abriendo la aplicación escaneé el image target siguiente:
 
-![Image Target](https://cdn-icons-png.flaticon.com/512/3461/3461980.png "Image Target")
+![Image Target](https://i.imgur.com/qPhleVh.png "Image Target")
 
 Puede navegar intuitivamente por la aplicacion viendo el indicador para deslizar y ver los demas tipos de alimentos que proporciona el menú. 
 Seleccionar el botón de escala permitira agrandar o encoger los alimentos mostrados tal como se ven la imagen.
@@ -34,4 +34,9 @@ Seleccionar el botón de escala permitira agrandar o encoger los alimentos mostr
 Ademas de hacer clic en el botón de menu para ver el menu lateral desplegable. 
 
 ![Interfaz2 ](https://i.imgur.com/nQfFZHr.png "Interfaz2 ")
+
+# Attributions:
+<a href="https://www.flaticon.com/free-icons/chef" title="chef icons">Chef icons created by Freepik - Flaticon</a>
+
+<a href="https://github.com/convalise/unity-material-icons" title="UnityMaterialIcons">Unity Material Icons by convalise </a>
 
