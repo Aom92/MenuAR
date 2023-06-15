@@ -9,9 +9,7 @@ Los modelos 3D de las comidas son escaneados de manera propia utilizando la apli
 
 
 
-Autor: Hugo Juárez.
 
-Profesor: Arturo Pérez.
 
 ## Acerca del proyecto
 Menu-AR es una aplicación de realidad aumentada que proporciona un menú de 
